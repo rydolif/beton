@@ -1,0 +1,139 @@
+@import "libs"
+@import "base"
+
+
+.header
+	padding: 25px 0
+
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__logo
+		display: flex
+		align-items: center
+
+		span
+			position: relative
+			margin-left: 35px
+			line-height: 1.1
+			color: #654b13
+			font-size: 16px
+
+			&::before
+				content: ''
+				position: absolute
+				left: -16px
+				width: 1px
+				height: 100%
+				background: $accent
+
+			b
+				text-decoration: underline
+				font-weight: 400
+
+	&__btn
+		height: 51px
+		border: 1px dotted $accent
+		padding: 7px 10px
+		border-radius: 4px
+	
+	&__tel
+		display: flex
+		flex-direction: column
+		text-align: right
+		line-height: 1
+
+		a
+			color: #292929
+			font-weight: 700
+			font-size: 30px
+			margin: 10px 0
+
+			span
+				color: $accent
+				font-weight: 400
+
+		b
+			text-transform: uppercase
+			color: $accent
+			font-weight: 400
+
+		span
+			color: #654b13
+
+		img
+			margin-right: 8px
+
+.hero
+	padding: 20px 0
+	background-image: url(../img/hero-bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	color: #fff
+
+	h1
+		margin-top: 30px
+		margin-bottom: 30px
+
+	&__sub-title
+		margin-bottom: 35px
+		font-size: 20px
+		margin-left: 95px
+		line-height: 1.2
+
+	&__stock
+		margin-bottom: 25px
+		margin-left: 125px
+		line-height: 1.1
+
+		&_title
+			font-size: 25px
+
+		span
+			font-size: 20px
+
+			b
+				text-decoration: underline
+
+
+.title
+	position: relative
+	text-align: center
+
+	h2
+		position: relative
+		font-size: 30px
+		color: $title
+		display: inline
+		line-height: 1
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			height: 8px
+			width: 1000%
+			background-image: linear-gradient(to top, #ffa200 0%, #ffde67 100%)
+
+		&::before
+			right: 125%
+
+		&::after
+			left: 125%
+
+.time
+	position: relative
+.range
+		padding-top: 25px
+
+
+.footer
+	height: 1000px
+
+
+@import "page"
+@import "media" // Always at the end

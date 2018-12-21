@@ -1,0 +1,107 @@
+@import "fonts"
+
+
+//----------------------fonts---------------------
+$fonts: 'Proxima', sans-serif
+//---------------------end-fonts---------------------
+
+//----------------------color---------------------
+$accent: #ffae00
+$text: #565656
+$title: #000
+
+//---------------------end-color---------------------
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $fonts
+	font-size: 14px
+	color: $text
+	line-height: 1.6
+	font-weight: 400
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a, div, ul, li, input, textarea
+	&:hover,
+	&:focus
+		outline: none
+
+section
+	overflow: hidden
+	
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.4
+	margin: 0
+	padding: 0
+
+h1
+	font-size: 40px
+	color: #fff
+	line-height: 1
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+i
+	font-style: normal
+	font-size: 16px
+	color: #fff
+
+input, textarea
+	border: 1px solid #ffae68
+	border-radius: 3px
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	font-size: 16px
+	font-style: italic
+	height: 45px
+	line-height: 45px
+	padding: 0 10px
+	width: 100%
+
+	&:focus:required:invalid
+		border-color: #ffae68
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: #ffae68
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: $text
+		font-size: 16px
+		line-height: 1
+		font-style: italic
+
+b, strong
+	font-weight: 700
+
+p
+	margin: 0
+	padding: 0
+
+a,
+a:focus,
+a:hover
+	outline: none
+	text-decoration: none
+
+@import "_base/preloader"
+@import "_base/animation"
+@import "_base/btn"
+@import "_base/form"
+@import "_base/modal"
+@import "_base/hamburger"
