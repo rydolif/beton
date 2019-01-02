@@ -1,0 +1,207 @@
+.contacts
+
+	&__info
+		padding-top: 35px
+		padding-bottom: 45px
+
+		h2
+			margin-bottom: 40px
+			font-size: 35px
+
+		&_container
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+		&_item
+			width: 48%
+
+			&--bank
+				
+				font-size: 16px
+				font-weight: 300
+
+				h4
+					font-size: 20px
+					color: #000
+					margin-bottom: 20px
+					margin-left: 35px
+
+				p
+					border: 1px dashed #ffae00
+					padding: 30px 40px
+					line-height: 1.2
+
+				b
+					color: #010101
+					font-weight: 500
+
+			.list
+
+			.item
+				position: relative
+				padding-left: 60px
+				line-height: 1.1
+				margin-bottom: 15px
+
+				b
+					font-weight: 600
+					font-size: 20px
+					color: #000
+
+				p
+					margin-bottom: 20px
+					font-size: 16px
+
+				img
+					position: absolute
+					left: 0
+					top: 0
+					max-width: 45px
+
+				&--tel
+					display: flex
+					justify-content: space-between
+					flex-wrap: wrap
+
+					p
+						width: 50%
+
+					span
+						img
+							position: relative
+							margin-right: 5px
+
+					a
+						font-size: 23px
+						color: #000
+						line-height: 1.2
+						font-weight: 700
+						&:hover
+							text-decoration: underline
+
+	&__map
+
+		.container
+			height: 100%
+
+		&_block
+			background-color: transparent
+			padding: 0
+			border: 2px solid $accent
+			top: auto
+			bottom: 25px
+			max-width: 380px
+
+			img
+				width: 100%
+
+		h2
+			font-size: 30px
+			font-weight: 400
+			margin-bottom: 35px
+			line-height: 1
+
+
+	&__form
+		padding-top: 40px
+		padding-bottom: 65px
+
+		.capcha
+			img
+				max-width: 100%
+
+		h2
+			font-size: 30px
+			font-weight: 400
+			margin-bottom: 10px
+			line-height: 1
+
+		&_sub-title
+			font-weight: 300
+			font-size: 16px
+			margin-bottom: 35px
+
+		.form
+			padding: 60px 70px
+			border: 6px dashed #e0e0e0
+			background-image: url(../img/contacts-form.jpg)
+			border-radius: 5px
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+			&__col
+				width: 35%
+
+				&:first-child
+					margin-top: 55px
+
+				&:nth-child(2)
+					width: 59%
+
+			&__line
+				display: flex
+				justify-content: flex-end
+				align-items: center
+				margin-bottom: 30px
+
+			.download
+				justify-content: flex-start
+				&__input
+					width: 1px
+					height: 1px
+					opacity: 0
+
+				&__label
+					color: $accent
+					text-decoration: underline
+					font-size: 19px
+					line-height: 1
+					text-align: left
+					cursor: pointer					
+
+					img
+						margin-right: 5px
+
+
+			&__textarea
+				margin-bottom: 25px
+
+			input
+				height: 44px
+				line-height: 44px
+				box-shadow: 0 0 0 rgba(253, 253, 253, 0.5), inset 0 0 5px #d1d1d1
+				background-color: #ffffff
+				background: #fff
+				border: 1px solid #d1d1d1
+				max-width: 250px
+
+			textarea
+				box-shadow: 0 0 0 rgba(253, 253, 253, 0.5), inset 0 0 5px #d1d1d1
+				border: 1px solid #d1d1d1
+				resize: none
+				height: 205px
+
+			label
+				font-size: 20px
+				text-align: right
+				margin-right: 25px
+				margin-bottom: 0
+				line-height: 1
+				white-space: nowrap
+
+			label.error
+				font-size: 14px
+				text-align: center
+				line-height: 1.7
+
+			.btn
+				font-size: 22px
+				font-weight: 400
+				display: inline-block
+				padding: 0 40px
+				height: 50px
+				line-height: 50px
+				width: auto
+

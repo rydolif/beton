@@ -34,7 +34,7 @@ gulp.task('styles', function() {
 	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+	// .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(browsersync.reload( {stream: true} ))
 });
@@ -45,10 +45,10 @@ gulp.task('js', function() {
 		'app/libs/jquery.validate.js', 					//----форма
 		'app/libs/jquery.mask.min.js', 					//----форма
 		'app/libs/jquery.popupoverlay.js', 				//----модалки
-		'app/libs/slick/slick.js', 						//----слайдер
-		 'app/libs/countdown.js',
-		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
-		// 'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		// 'app/libs/slick/slick.js', 						//----слайдер
+		 'app/libs/flipclock/flipclock.js',
+		'app/libs/swiper/swiper.min.js', 			//----слайдер
+		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
 		// 'app/libs/masonry.pkgd.js',					//----сетка елементов
 		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
@@ -56,7 +56,7 @@ gulp.task('js', function() {
 		])
 	.pipe(plumber())
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Mifify js (opt.)
+	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browsersync.reload({ stream: true }))
 });

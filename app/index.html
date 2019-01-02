@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>start</title>
+	<title>Главная</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,29 +11,66 @@
 	<meta name="theme-color" content="#000">
 
 	<link rel="stylesheet" href="css/main.min.css">
+    </script>
 </head>
 
 <body>
-<!-- 
-	<div class="preloader">
-		<div class="pulse"></div>
-	</div> -->
+
+	<div class="up click"><a href="#top"></a></div>
+	<span id="top"></span>
+
+	<a href="#" class="free free_open">
+		<img src="img/free-icon.png" alt="">
+		<span>Бесплатный замер</span>
+	</a>
+	
+	<nav class="nav__responsive">
+		<ul>
+			<li><a href="#">Главная</a></li>
+			<li class="click"><a href="#factory">О заводе</a></li>
+			<li><a href="catalog.html">Каталог</a></li>
+			<li class="click"><a href="#work">Наши работы</a></li>
+			<li><a href="#">Вопросы-ответы</a></li>
+			<li class="click"><a href="#map">География заводов</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+	</nav>
+
+	<nav class="nav">
+		<button class="hamburger" type="button">
+			<span class="hamburger__box">
+				<span class="hamburger__item"></span>
+			</span>
+		</button>
+		<a href="/" class="nav__logo"><img src="img/logo.png" alt=""></a>
+		<ul>
+			<li><a href="#">Главная</a></li>
+			<li class="click"><a href="#factory">О заводе</a></li>
+			<li><a href="catalog.html">Каталог</a></li>
+			<li class="click"><a href="#work">Наши работы</a></li>
+			<li><a href="#">Вопросы-ответы</a></li>
+			<li class="click"><a href="#map">География заводов</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+		<a href="tel:88007777777" class="nav__tel">| 8-800-777-77-77</a>
+		<a href="#" class="btn order_open">Заказать звонок</a>
+	</nav>
 
 	<header class="header">
 		<div class="container">
 			<div class="header__container">
 		
-				<a href="index.html" class="header__logo">
-					<img src="img/logo.png" alt="logo">
-					<span>производство и продажа бетона <br>с доставкой в г. <b>Москве</b></span>
-				</a>
+				<div class="header__logo">
+					<a href="/"><img src="img/logo.png" alt="logo"></a>
+					<span>производство и продажа бетона <br>с доставкой в г. <b class="sity_open">Москве</b></span>
+				</div>
 
 				<div class="header__btn">
-					<a href="#" class="btn"><img src="img/btn-order.png" alt="">Заказать звонок</a>
+					<a href="#" class="btn order_open"><img src="img/btn-order.png" alt="">Заказать звонок</a>
 				</div>
 
 				<div class="header__tel">
-					<b>Прием заявок</b>
+					<b class="request_open">Прием заявок</b>
 					<a href="tel:88007777777"><span>8 (800)</span> 777-77-77</a>
 					<span><img src="img/time-header.png" alt="">Работаем круглосуточно</span>
 				</div>
@@ -53,49 +90,10 @@
 						<div class="hero__stock">
 							<b class="hero__stock_title">АКЦИЯ!</b>
 							<br>
-							<span>Закажите расчёт бетона сейчас и <b>забронируйте скидку 10%</b></span>
+							<p class="hero__stock_text">Закажите расчёт бетона сейчас и <b>забронируйте скидку 10%</b></p>
+							<div class="clock"></div>
 						</div>
-
-						<div id="countdown">
-						</div>
-<script type="application/javascript">
-// $(function(){
-// 	var note = $('#note'),
-// 		ts = new Date (2019, 0, 1),
-// 		newYear = true;
-
-// 		if((new Date()) > ts){
-// 			ts = (new Date()).getTime() + 10*24*60*60*1000;
-// 			newYear = false;
-// 		}
-
-// 	$('#countdown').countdown({
-// 		timestamp : ts,
-// 		callback : function(days, hours, minutes, seconds){
-// 			var message = "";
-// 			message += days + "day" + (days==1 & '':'s') + ", ";
-// 			message += hours + "hours" + (hours==1 & '':'s') + ", ";
-// 			message += minutes + "minutes" + (minutes==1 & '':'s') + "end";
-// 			message += seconds + "seconds" + (seconds==1 & '':'s') + "end";
-// 		};
-// 	});
-// });
-
-</script>
-<script type="application/javascript">
-var myCountdown1 = new Countdown({
-								 	time: 86400 * 3, // 86400 seconds = 1 day
-									width:300, 
-									height:60,  
-									rangeHi:"day",
-									style:"flip"	// <- no comma on last item!
-									});
-
-</script>
-
-
-
-
+						
 					</div>
 					<div class="col-lg-4">
 						<form action="sendmail.php" class="form" method="post">
@@ -108,70 +106,961 @@ var myCountdown1 = new Countdown({
 							<div class="form__line">
 								<input type="tel" name="phone" required placeholder="Введите номер телефона">
 							</div>
-							<p>Нажимая на кнопку, Вы принимаете <a href="#">Положение</a> <br>и <a href="#">Согласие</a> на обработку персональных данных. </p>
+							<p class="modal__information">Нажимая на кнопку, Вы принимаете <a href="#">Положение</a> <br>и <a href="#">Согласие</a> на обработку персональных данных. </p>
 							<div class="form__line">
-								<button type="submit" class="btn form__btn" name="submit" value="отправить">Отправить заявку</button>
+								<button type="submit" class="btn form__btn" name="submit">Отправить заявку</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-
+		                              
 		<section class="range">
 			<div class="title"><h2>Ассортимент бетона</h2></div>
 			<div class="container">
+
+				<div class="range__list">
+					<div class="range__item">
+						<h3><a href="#">Товарный бетон</a></h3>
+						<div class="range__item_wrap">
+							<a href="#" class="range__item_img request_open">
+								<img src="img/range1.jpg" alt="">
+								<span>Отправить заявку</span>
+							</a>
+							<div class="range__item_list">
+								<a href="#" class="btn">М100 (класс B7,5)</a>
+								<a href="#" class="btn">М150 (класс В12,5)</a>
+								<a href="#" class="btn">М200 (класс В15)</a>
+								<a href="#" class="btn">М250 (класс В20)</a>
+								<a href="#" class="btn">М300 (класс В22,5)</a>
+								<a href="#" class="btn">М350 (класс B25)</a>
+								<a href="#" class="btn">М400 (класс В30)</a>
+								<a href="#" class="btn">М450 (класс В35)</a>
+								<a href="#" class="btn">М550 (класс В40)</a>
+								<a href="#" class="btn">М600 (класс В45)</a>
+							</div>
+						</div>
+					</div>
+					<div class="range__item range__item--max">
+						<h3><a href="#">Керамзитобетон</a></h3>
+						<div class="range__item_wrap">
+							<a href="#" class="range__item_img request_open">
+								<img src="img/range2.jpg" alt="">
+								<span>Отправить заявку</span>
+							</a>
+							<div class="range__item_list">
+								<a href="#" class="btn">М100 (класс B7,5)</a>
+								<a href="#" class="btn">М150 (класс В12,5)</a>
+								<a href="#" class="btn">М200 (класс В15)</a>
+								<a href="#" class="btn">М250 (класс В20)</a>
+							</div>
+						</div>
+					</div>
+					<div class="range__item range__item--min">
+						<h3><a href="#">Пескобетон</a></h3>
+						<div class="range__item_wrap">
+							<a href="#" class="range__item_img request_open">
+								<img src="img/range3.jpg" alt="">
+								<span>Отправить заявку</span>
+							</a>
+							<div class="range__item_list">
+								<a href="#" class="btn">М250</a>
+								<a href="#" class="btn">М300</a>
+								<a href="#" class="btn">М350</a>
+							</div>
+						</div>
+					</div>
+					<div class="range__item range__item--max">
+						<h3><a href="#">Тощий бетон</a></h3>
+						<div class="range__item_wrap">
+							<a href="#" class="range__item_img request_open">
+								<img src="img/range3.jpg" alt="">
+								<span>Отправить заявку</span>
+							</a>
+							<div class="range__item_list">
+								<a href="#" class="btn">М100</a>
+								<a href="#" class="btn">М150</a>
+								<a href="#" class="btn">М200</a>
+								<a href="#" class="btn">М250</a>
+								<a href="#" class="btn">М300</a>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="range__item range__item--min range__item--banner">
+						<img src="img/range-banner.jpg" alt="">
+						<p>
+							<span>При заказе бетона <br>марки М300 от 30 м3</span>
+							<b>3 300 руб/м<sup>3</sup></b>
+						</p>
+					</a>
+					<div class="range__item range__item--max">
+						<h3><a href="#">Цементный раствор</a></h3>
+						<div class="range__item_wrap">
+							<a href="#" class="range__item_img request_open">
+								<img src="img/range3.jpg" alt="">
+								<span>Отправить заявку</span>
+							</a>
+							<div class="range__item_list">
+								<a href="#" class="btn">М100</a>
+								<a href="#" class="btn">М150</a>
+								<a href="#" class="btn">М200</a>
+								<a href="#" class="btn">М4</a>
+							</div>
+						</div>
+					</div>
+					<div class="range__item range__item--min range__item--question">
+						<div class="range__item_wrap">
+							<div class="range__item--question_name">
+								<img src="img/range-face.jpg" alt="">
+								<span>Володин Евгений</span>
+							</div>
+							<div class="range__item--question_info">
+								<h3>Появились вопросы?</h3>
+								<p>Звоните / пишите! Отвечу с радостью! Проконсультирую по выбору бетона.</p>
+								<p><a href="teL:88007777777"><span>8 (800)</span> 777-77-77</a> <span>(доб.101)</span></p>
+								<a href="#" class="btn">Задать вопрос онлайн</a>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 			</div>
 		</section>
 
-
-		<section class="">
+		<section class="rent">
+			<div class="title">
+				<h2>Аренда бетононасоса</h2>
+			</div>
 			<div class="container">
-
+				<div class="rent__container">
+					<div class="rent__item rent__item--max">
+						<img src="img/rent1.jpg" alt="">
+						<p>
+							Строительным компаниям высокозатратно и неразумно иметь в собственности автобетононасосы: дополнительные затраты на ремонт, обслуживание техники.
+						</p>
+						<p>
+							Компания Аванти предоставляет в аренду автобетононасосы в Москве. Качество проводимых строительных работ зависит не только от подаваемой бетонной смеси, но и от скорости её подачи. 
+						</p>
+						<p>
+							Для аренды доступен парк автомашин с длиной стрелы от 24 м до 62 м, что позволяет подобрать оптимальный вариант для любого строительного объекта.
+						</p>
+						<p>
+							Cпециализированная техника позволит отказаться от неэффективного ручного труда в пользу продуктивного производства.
+						</p>
+						<p>
+							Квалифицированный оператор бетононасоса выполнит все необходимые операции качественно и в короткие сроки. Техника, доступная для аренды, регулярно проходит технический осмотр, поэтому заказчики могут быть уверены в том, что заявка будет выполнена вовремя.
+						</p>
+						<ul>
+							<li>Собственный парк техники.</li>
+							<li>Выезжаем в течение часа.</li>
+							<li>Аренда на любой срок.</li>
+							<li>Автобетононасосы от 22 до 65 м.</li>
+						</ul>
+					</div>
+					<div class="rent__item rent__item--min">
+						<div class="rent__item--min_block">
+							<div class="rent__item--min_header">
+								<span>Услуги по аренде</span>
+								<span>Цена за смену</span>
+							</div>
+							<div class="rent__item--min_center">
+								<ul>
+									<li>
+										<a href="#">Автобетононасос 24 м</a>
+										<span>18 400 руб.</span>
+									</li>
+									<li>
+										<a href="#">Автобетононасос 32 м</a>
+										<span>22 400 руб.</span>
+									</li>
+									<li>
+										<a href="#">Автобетононасос 36 м</a>
+										<span>24 800 руб</span>
+									</li>
+									<li>
+										<a href="#">Автобетононасос 42 м</a>
+										<span>30 000 руб.</span>
+									</li>
+									<li>
+										<a href="#">Автобетононасос 46 м</a>
+										<span>36 000 руб.</span>
+									</li>
+									<li>
+										<a href="#">Автобетононасос 52 м</a>
+										<span>40 000 руб.</span>
+									</li>
+									<li>
+										<a href="#">Автобетононасос 62 м</a>
+										<span>60 000 руб.</span>
+									</li>
+								</ul>
+							</div>
+							<div class="rent__item--min_footer">
+								<a href="#">Все услуги</a>
+								<a href="#" class="btn">Рассчитать стоимость</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="">
+		<section class="factory" id="factory">
+			<div class="title">
+				<h2>О заводе «Аванти»</h2>
+			</div>
 			<div class="container">
-
+				<p>
+					Бетонный завод «Аванти» осуществляет производство и доставку бетона для многоэтажного строительства и частного сектора в Москве. На каждую партию бетона мы предоставляем сертификаты качества. Обеспечиваем контроль качества каждой поставки бетона всех марок.
+				</p>
+				<iframe src="https://www.youtube.com/embed/g0O8gMe9F7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</section>
 
+		<section class="video">
+			<div class="container">
+				<div class="video__slider swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_1.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_2.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_3.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_4.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_5.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_6.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_7.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_8.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="video1_open"><img src="img/foto_4.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="video-next swiper-button-next"></div>
+				<div class="video-prev swiper-button-prev"></div>
+			</div>
+		</section>
+
+		<section class="content">
+			<div class="container">
+				<div class="content__list">
+					<div class="content__item">
+						<div class="content__item_img"><img src="img/icon.svg" alt=""></div>
+						<p><b>Собственное производство <br> мощностью 90 м3/час</b></p>
+					</div>
+					<div class="content__item">
+						<div class="content__item_img"><img src="img/icon2.svg" alt=""></div>
+						<p><b>Собственное производство <br> мощностью 90 м3/час</b></p>
+					</div>
+					<div class="content__item">
+						<div class="content__item_img"><img src="img/icon3.svg" alt=""></div>
+						<p><b>Собственное производство <br> мощностью 90 м3/час</b></p>
+					</div>
+					<div class="content__item">
+						<div class="content__item_img"><img src="img/icon4.svg" alt=""></div>
+						<p><b>Собственное производство <br> мощностью 90 м3/час</b></p>
+					</div>
+					<div class="content__item">
+						<div class="content__item_img"><img src="img/icon5.svg" alt=""></div>
+						<p><b>Собственное производство <br> мощностью 90 м3/час</b></p>
+					</div>
+					<div class="content__item">
+						<div class="content__item_img"><img src="img/icon6.svg" alt=""></div>
+						<p><b>Собственное производство <br> мощностью 90 м3/час</b></p>
+					</div>
+				</div>
+				<div class="content__word">
+					<img src="img/word.svg" alt="">
+					<p>Договор на <br>поставку бетона (.doc)</p>
+					<a href="#" class="btn document_open">Скачать</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="certificates">
+			<div class="title">
+				<h2>Сертификаты качества</h2>
+			</div>
+			<div class="container">
+
+				<div class="certificates__slider swiper-container">
+					<div class="swiper-wrapper">
+						<div  class="swiper-slide">
+							<a href="img/certificates1.jpg" data-fancybox="gallery">
+								<img src="img/certificates1.jpg" alt="">
+							</a>
+						</div>
+						<div  class="swiper-slide">
+							<a href="img/certificates2.jpg" data-fancybox="gallery">
+								<img src="img/certificates2.jpg" alt="">
+							</a>
+						</div>
+						<div  class="swiper-slide">
+							<a href="img/certificates3.jpg" data-fancybox="gallery">
+								<img src="img/certificates3.jpg" alt="">
+							</a>
+						</div>
+						<div  class="swiper-slide">
+							<a href="img/certificates4.jpg" data-fancybox="gallery">
+								<img src="img/certificates4.jpg" alt="">
+							</a>
+						</div>
+						<div  class="swiper-slide">
+							<a href="img/certificates5.jpg" data-fancybox="gallery">
+								<img src="img/certificates5.jpg" alt="">
+							</a>
+						</div>
+						<div  class="swiper-slide">
+							<a href="img/certificates6.jpg" data-fancybox="gallery">
+								<img src="img/certificates6.jpg" alt="">
+							</a>
+						</div>
+						<div  class="swiper-slide" >
+							<a href="img/certificates7.jpg" data-fancybox="gallery">
+								<img src="img/certificates7.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="certificates-next swiper-button-next"></div>
+				<div class="certificates-prev swiper-button-prev"></div>
+			</div>
+		</section>
+
+		<section class="orders">
+			<div class="title">
+				<h2>Выполненные заказы</h2>
+			</div>
+			<div class="container orders__container">
+				<div class="orders__item">
+					<div class="orders__item_img">
+						<div><img src="img/orders1.jpg" alt=""></div>
+						<a href="#">«Аэропорт Остафьево»</a>
+					</div>
+					<div class="orders__item_content">
+						<p class="orders__item_info">Объект: <b>«Аэропорт Остафьево», г. Москва</b></p>
+						<p class="orders__item_info">
+							Марка бетона: <b>М350, М450</b>
+							<br>Объем: <b>25 000 м3</b>
+							<br>Период работы:<b>07.06.2018 по наст.время</b>
+						</p>
+						<p class="orders__item_text">
+							«Высокая степень ответственности и индивидуальный подход – неотъемлемые качества бетонного завода Аванти. Приятное сотрудничество». 
+						</p>
+						<p class="orders__item_name"><b>Шамиль Исаев (прораб)</b></p>
+					</div>
+				</div>
+				<div class="orders__item">
+					<div class="orders__item_img">
+						<div><img src="img/orders1.jpg" alt=""></div>
+						<a href="#">«ЖК Москвич»</a>
+					</div>
+					<div class="orders__item_content">
+						<p class="orders__item_info">Объект: <b>«Аэропорт Остафьево», г. Москва</b></p>
+						<p class="orders__item_info">
+							Марка бетона: <b>М350, М450</b>
+							<br>Объем: <b>25 000 м3</b>
+							<br>Период работы:<b>07.06.2018 по наст.время</b>
+						</p>
+						<p class="orders__item_text">
+							«Высокая степень ответственности и индивидуальный подход – неотъемлемые качества бетонного завода Аванти. Приятное сотрудничество». 
+						</p>
+						<p class="orders__item_name"><b>Шамиль Исаев (прораб)</b></p>
+					</div>
+				</div>
+				<div class="orders__item">
+					<div class="orders__item_img">
+						<div><img src="img/orders1.jpg" alt=""></div>
+						<a href="#">«ЖК Москвич»</a>
+					</div>
+					<div class="orders__item_content">
+						<p class="orders__item_info">Объект: <b>«Аэропорт Остафьево», г. Москва</b></p>
+						<p class="orders__item_info">
+							Марка бетона: <b>М350, М450</b>
+							<br>Объем: <b>25 000 м3</b>
+							<br>Период работы:<b>07.06.2018 по наст.время</b>
+						</p>
+						<p class="orders__item_text">
+							«Высокая степень ответственности и индивидуальный подход – неотъемлемые качества бетонного завода Аванти. Приятное сотрудничество». 
+						</p>
+						<p class="orders__item_name"><b>Шамиль Исаев (прораб)</b></p>
+					</div>
+				</div>
+				<div class="orders__item">
+					<div class="orders__item_img">
+						<div><img src="img/orders1.jpg" alt=""></div>
+						<a href="#">«Аэропорт Остафьево»</a>
+					</div>
+					<div class="orders__item_content">
+						<p class="orders__item_info">Объект: <b>«Аэропорт Остафьево», г. Москва</b></p>
+						<p class="orders__item_info">
+							Марка бетона: <b>М350, М450</b>
+							<br>Объем: <b>25 000 м3</b>
+							<br>Период работы:<b>07.06.2018 по наст.время</b>
+						</p>
+						<p class="orders__item_text">
+							«Высокая степень ответственности и индивидуальный подход – неотъемлемые качества бетонного завода Аванти. Приятное сотрудничество». 
+						</p>
+						<p class="orders__item_name"><b>Шамиль Исаев (прораб)</b></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="question">
+			<div class="title">
+				<h2>Частые вопросы</h2>
+			</div>
+			<div class="container">
+				<div class="block active">
+					<div class="block__header">
+						<span><span></span></span>
+						<p><b>Что влияет на стоимость бетона?</b></p>
+					</div>
+					<div class="block__content">
+						<img src="img/acardion-arrow.png" alt="" class="block__content_arrow">
+						<p>
+							Стоимость доставки бетона от нашего завода до Вашего объекта можно посчитав километраж зоны нахождения Вашего объекта, либо узнать цену позвонив нашему оператору: <a href="tel:88007777777"><b>8 (800) 777-77-77</b></a>:
+						</p>
+						<div class="question__table">
+							<table>
+								<tr>
+									<td><b>Категория</b></td>
+									<td><b>Расстояние, км</b></td>
+									<td><b>Цена, с НДС</b></td>
+								</tr>
+								<tr>
+									<td>0</td>
+									<td>0-10</td>
+									<td>350 руб.</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>10-15</td>
+									<td>400 руб.</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>15-20</td>
+									<td>450 руб.</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>20-25</td>
+									<td>500 руб.</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>25-30</td>
+									<td>550 руб.</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>30-35</td>
+									<td>600 руб.</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>35-40</td>
+									<td>650 руб.</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block__header">
+						<span><span></span></span>
+						<p><b>Что влияет на стоимость бетона?</b></p>
+					</div>
+					<div class="block__content">
+						<img src="img/acardion-arrow.png" alt="" class="block__content_arrow">
+						<p>
+							Стоимость доставки бетона от нашего завода до Вашего объекта можно посчитав километраж зоны нахождения Вашего объекта, либо узнать цену позвонив нашему оператору: <a href="tel:88007777777"><b>8 (800) 777-77-77</b></a>:
+						</p>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block__header">
+						<span><span></span></span>
+						<p><b>Что влияет на стоимость бетона?</b></p>
+					</div>
+					<div class="block__content">
+						<img src="img/acardion-arrow.png" alt="" class="block__content_arrow">
+						<p>
+							Стоимость доставки бетона от нашего завода до Вашего объекта можно посчитав километраж зоны нахождения Вашего объекта, либо узнать цену позвонив нашему оператору: <a href="tel:88007777777"><b>8 (800) 777-77-77</b></a>:
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="map" id="map">
+			<div class="title">
+				<h2>География заводов</h2>
+			</div>
+
+			<div class="map__iframe">
+				<iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Ae063c014732634e16a19cbb97d3ab1a3f1019743dce6fb8a7c685987b297b22c&amp;source=constructor"></iframe>
+				<div class="container">
+				
+				<div class="container">
+					<div class="map__block">
+						<div class="map__block_top">
+							<img src="img/contacts-logo.png" alt="">
+							<div>
+								<a href="tel:88007777777" class="tel">8 (800) <b>777-77-77</b></a>
+								<a href="mailto:info@skbeton.com" class="mail">info@skbeton.com</a>
+							</div>
+						</div>
+						<h3>Адреса заводов</h3>
+						<div class="map__block_center">
+							<ul>
+								<li>—  <a href="#">Москва, Чермянская улица, д.12с14</a></li>
+								<li>—  <a href="#">Москва, улица Горбунова, д.8с1</a></li>
+								<li>—  <a href="#">Москва, Складочная улица, д.5с1</a></li>
+								<li>—  <a href="#">Москва, Вашутинское шоссе, вл. 18А</a></li>
+								<li>—  <a href="#">Балашиха, ш. Энтузиастов, вл. 1А, с2</a></li>
+								<li>—  <a href="#">Реутов, проспект Мира, 28</a></li>
+								<li>—  <a href="#">Москва, Чермянская улица, д.12с14</a></li>
+								<li>—  <a href="#">Москва, улица Горбунова, д.8с1</a></li>
+								<li>—  <a href="#">Москва, Складочная улица, д.5с1</a></li>
+								<li>—  <a href="#">Москва, Вашутинское шоссе, вл. 18А</a></li>
+								<li>—  <a href="#">Балашиха, ш. Энтузиастов, вл. 1А, с2</a></li>
+								<li>—  <a href="#">Реутов, проспект Мира, 28</a></li>
+								<li>—  <a href="#">Москва, Чермянская улица, д.12с14</a></li>
+								<li>—  <a href="#">Москва, улица Горбунова, д.8с1</a></li>
+								<li>—  <a href="#">Москва, Складочная улица, д.5с1</a></li>
+								<li>—  <a href="#">Москва, Вашутинское шоссе, вл. 18А</a></li>
+								<li>—  <a href="#">Балашиха, ш. Энтузиастов, вл. 1А, с2</a></li>
+								<li>—  <a href="#">Реутов, проспект Мира, 28</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="info">
+			<div class="container">
+				<h3>Заказать бетон с доставкой в Москве <span>со скидкой</span>.</h3>
+				<p>
+					Компания «Аванти» производит и поставляет товарный бетон и цементные растворы самого лучшего качества в Москве уже более 10 лет. Экслюзивное сотрудничество с ведущими <a href="#">заводами бетонных смесей</a> позволяет гарантированно доставить <a href="#">растворы высокого качества</a> по оптимальной цене.
+				</p>
+				<p>
+					Упорядоченная и профессиональная работа производственного комплекса «Аванти» позволит вести строительные работы согласно срокам и утвержденной смете, т.к. работа компании направлена на репутацию и долгосрочное сотрудничество. За весь период работы компании, обслужено более 5600 объектов.
+				</p>
+
+				<h3>Основные ценообразующие факторы бетона.</h3>
+				<ul>
+					<li>—  <b>Марка бетона</b>, соответствующая проектным требованиям строительства.</li>
+					<li>—  <b>Доступ к месту отгрузки</b>. Если доступ миксеру осложнен, логисты компании смогут предложить услуги автобетононасоса с необходимой длиной стрелы.</li>
+					<li>—  <b>Время поставки</b>. Продажа бетона по минимальной цене в любом необходимом количестве кубов возможна в будние дни и рабочее время.</li>
+				</ul>
+				<p>
+					Если вы хотите заказать бетон в Москве, обращайтесь к лучшему из лучших. Стройте вместе с компанией «Аванти» и сюрпризы будут только радостными!
+				</p>
+
+			</div>
+		</section>
 
 	</main>
 
 	<footer class="footer">
-		<div class="container">
-			
+		<div class="container footer__container">
+			<div class="footer__col">
+				<a href="/"><img src="img/footer-logo.png" alt="" class="footer__logo"></a>
+				<p>© 2018 <a href="#">«Аванти»</a>. Все права защищены.</p>
+				<span>Сайт не является публичной офертой<br>и носит информационный характер</span>
+				<a href="#">Политика конфиденциальности</a>
+			</div>
+			<div class="footer__col">
+				<ul>
+					<li class="click"><a href="#factory">О заводе</a></li>
+					<li><a href="catalog.html">Каталог</a></li>
+					<li class="click"><a href="#work">Наши работы</a></li>
+					<li><a href="#">Вопросы-ответы</a></li>
+					<li class="click"><a href="#map">География заводов</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+				<div class="footer__stat">
+					<img src="img/statistics.png" alt="">
+				</div>
+			</div>
+			<div class="footer__col footer__info">
+				<span><img src="img/footer-time.png" alt="">Работаем круглосуточно</span>
+				<a href="tel:88007777777" class="footer__info_tel">8 (800) <b>777-77-77</b></a>
+				<a href="mailto:info@skbeton.com" class="footer__info_mail"><img src="img/footer-mail.png" alt="">info@skbeton.com</a>
+				<a href="#" target="_blank" class="footer__info_partners">
+					<img src="img/frilans.png" alt="">
+				</a>
+			</div>
 		</div>
 	</footer>
 
 	<!-- 	modal -->
-	<div class="modal" id="order">
-		<div class="wrapper">
-			<form action="sendmail.php" class="form" method="post">
+		<div class="modal" id="order">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form modal__form" method="post">
+					<button class="close order_close" type="button"></button>
+					<h3>Заказать звонок</h3>
+					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<div class="form__line">
+						<input type="text" name="name" placeholder="Как к Вам обращаться?" required>
+					</div>
+					<div class="form__line">
+						<input type="tel" name="phone" required placeholder="+7 (___) ___ - __ - __">
+					</div>
+					<div class="form__line form__line--date">
+						<div>
+							<label>Желаемое время</label>
+							<input type="time" name="time">
+						</div>
+						<div>
+							<label>Желаемая дата</label>
+							<input type="date" name="date">
+						</div>
+					</div>
+					<div class="form__line form__line--textarea">
+						<textarea name="textarea" id="textarea" placeholder="Дополнительные сведения ..."></textarea>
+					</div>
+					<p class="modal__information">Нажимая на кнопку, Вы принимаете <a href="#">Положение</a> <br>и <a href="#">Согласие</a> на обработку персональных данных. </p>
+					<div><button type="submit" class="btn form__btn" name="submit">ЖДУ ЗВОНКА</button></div>
 
-				<button class="close order_close" type="button"></button>
-
-				<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
-				<input type="hidden" name="subject" value="Узнать подробнее!">
-				<div class="form__line"><input type="text" name="name" placeholder="Имя" required></div>
-				<div class="form__line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
-				<div><button type="submit" class="btn form__btn" name="submit" value="отправить">Отправить</button></div>
-				<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
-
-			</form>
+				</form>
+			</div>
 		</div>
-	</div>
 
-	<div class="modal" id="thanks">
-		<button class="close thanks_close" type="button"></button>
+		<div class="modal" id="free">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form modal__form" method="post">
+					<button class="close free_close" type="button"></button>
+					<h3>Вызвать замерщика</h3>
+					<span class="modal__sub-title">
+						Для измерения необходимого объема бетона
+						<br>мы отправляем (это бесплатно) на 
+						<br>Ваш объект инженера.
+					</span>
+					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<div class="form__line">
+						<input type="text" name="name" placeholder="Как к Вам обращаться?" required>
+					</div>
+					<div class="form__line">
+						<input type="tel" name="phone" required placeholder="+7 (___) ___ - __ - __">
+					</div>
+					<div class="form__line form__line--date">
+						<div>
+							<label>Желаемое время</label>
+							<input type="time" name="time">
+						</div>
+						<div>
+							<label>Желаемая дата</label>
+							<input type="date" name="date">
+						</div>
+					</div>
+					<div class="form__line form__line--textarea">
+						<textarea name="textarea" placeholder="Дополнительные сведения ..."></textarea>
+					</div>
+					<p class="modal__information">Нажимая на кнопку, Вы принимаете <a href="#">Положение</a> <br>и <a href="#">Согласие</a> на обработку персональных данных. </p>
+					<div><button type="submit" class="btn form__btn" name="submit">Отправить запрос</button></div>
 
-		<h3>Спасибо <br>за доверие!</h3>
-		<p>Мы обязательно с вами свяжемся!</p>
-	</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal" id="request">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form modal__form" method="post">
+					<button class="close request_close" type="button"></button>
+					<h3>ОСТАВИТЬ ЗАЯВКУ</h3>
+					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<div class="form__line">
+						<input type="text" name="name" placeholder="Как к Вам обращаться?" required>
+					</div>
+					<div class="form__line">
+						<input type="tel" name="phone" required placeholder="+7 (___) ___ - __ - __">
+					</div>					
+					<div class="form__line">
+						<input type="email" name="email" required placeholder="Электроная почта">
+					</div>
+					<p class="modal__price">
+						Общий объем: <b>2 500 м <sup>3</sup></b> <br>
+						Общая стоимость: <b>25 580 000 руб.</b>
+					</p>
+					<p class="modal__information">Нажимая на кнопку, Вы принимаете <a href="#">Положение</a> <br>и <a href="#">Согласие</a> на обработку персональных данных. </p>
+					<div><button type="submit" class="btn form__btn" name="submit">ЖДУ ЗВОНКА</button></div>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="modal" id="document">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form modal__form" method="post">
+					<button class="close document_close" type="button"></button>
+					<h3>Чтобы скачать ДОГОВОР</h3>
+					<p class="modal__sub-title">заполните форму</p>
+					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<div class="form__line">
+						<input type="text" name="name" placeholder="Как к Вам обращаться?" required>
+					</div>
+					<div class="form__line">
+						<input type="tel" name="phone" required placeholder="+7 (___) ___ - __ - __">
+					</div>					
+					<div class="form__line">
+						<input type="email" name="email" required placeholder="Электроная почта">
+					</div>
+					<p class="modal__information">Нажимая на кнопку, Вы принимаете <a href="#">Положение</a> <br>и <a href="#">Согласие</a> на обработку персональных данных. </p>
+					<div><button type="submit" class="btn form__btn" name="submit">ЖДУ ЗВОНКА</button></div>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal modal--video" id="video1">
+			<div class="wrapper">
+				<button class="close video1_close" type="button"></button>
+				<h3>Название видео</h3>
+				<iframe src="https://www.youtube.com/embed/g0O8gMe9F7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
+
+		<div class="modal modal--sity" id="sity">
+			<div class="wrapper">
+				<button class="close sity_close" type="button"></button>
+				
+				<h3>Наши подразделения в Московском регионе</h3>
+				<div class="modal--sity__list">
+					<div class="modal--sity__item">
+						<h4>А</h4>
+						<ul>
+							<li><a href="#">Апрелевка</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Б</h4>
+						<ul>
+							<li><a href="#">Балашиха</a></li>
+							<li><a href="#">Бронницы</a></li>
+							<li><a href="#">Барыбино</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>В</h4>
+						<ul>
+							<li><a href="#">Видное</a></li>
+							<li><a href="#">Волоколамск</a></li>
+							<li><a href="#">Воскресенск</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Г</h4>
+						<ul>
+							<li><a href="#">Голицыно</a></li>
+						</ul>
+					</div>				
+					<div class="modal--sity__item">
+						<h4>Д</h4>
+						<ul>
+							<li><a href="#">Дзержинский</a></li>
+							<li><a href="#">Дмитров</a></li>
+							<li><a href="#">Долгопрудный</a></li>
+							<li><a href="#">Домодедово</a></li>
+							<li><a href="#">Дубна</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Е</h4>
+						<ul>
+							<li><a href="#">Егорьевск</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Ж</h4>
+						<ul>
+							<li><a href="#">Железнодорожный</a></li>
+							<li><a href="#">Жуковский</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>З</h4>
+						<ul>
+							<li><a href="#">Звенигород</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>И</h4>
+						<ul>
+							<li><a href="#">Ивантеевка</a></li>
+							<li><a href="#">Истра</a></li>
+						</ul>
+					</div>				
+					<div class="modal--sity__item">
+						<h4>К</h4>
+						<ul>
+							<li><a href="#">Кашира</a></li>
+							<li><a href="#">Климовск</a></li>
+							<li><a href="#">Клин</a></li>
+							<li><a href="#">Коломна</a></li>
+							<li><a href="#">Королёв</a></li>
+							<li><a href="#">Котельники</a></li>
+							<li><a href="#">Красноармейск</a></li>
+							<li><a href="#">Красногорск</a></li>
+							<li><a href="#">Кубинка</a></li>
+						</ul>
+					</div>				
+					<div class="modal--sity__item">
+						<h4>Л</h4>
+						<ul>
+							<li><a href="#">Лобня</a></li>
+							<li><a href="#">Лосино-Петровский</a></li>
+							<li><a href="#">Лотошино</a></li>
+							<li><a href="#">Луховицы</a></li>
+							<li><a href="#">Лыткарино</a></li>
+							<li><a href="#">Люберцы</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>М</h4>
+						<ul>
+							<li><a href="#">Михнево</a></li>
+							<li><a href="#">Можайск</a></li>
+							<li><a href="#">Москва</a></li>
+							<li><a href="#">Мытищи</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Н</h4>
+						<ul>
+							<li><a href="#">Наро-Фоминск</a></li>
+							<li><a href="#">Нахабино</a></li>
+							<li><a href="#">Ногинск</a></li>
+						</ul>
+					</div>				
+					<div class="modal--sity__item">
+						<h4>О</h4>
+						<ul>
+							<li><a href="#">Одинцово</a></li>
+							<li><a href="#">Озеры</a></li>
+							<li><a href="#">Орехово-Зуево</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>П</h4>
+						<ul>
+							<li><a href="#">Павловский Посад</a></li>
+							<li><a href="#">Подольск</a></li>
+							<li><a href="#">Пушкино</a></li>
+							<li><a href="#">Пущино</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>П</h4>
+						<ul>
+							<li><a href="#">Павловский Посад</a></li>
+							<li><a href="#">Подольск</a></li>
+							<li><a href="#">Пушкино</a></li>
+							<li><a href="#">Пущино</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Р</h4>
+						<ul>
+							<li><a href="#">Раменское</a></li>
+							<li><a href="#">Реутов</a></li>
+							<li><a href="#">Рошаль</a></li>
+							<li><a href="#">Руза</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>С</h4>
+						<ul>
+							<li><a href="#">Сергиев Посад</a></li>
+							<li><a href="#">Серпухов</a></li>
+							<li><a href="#">Солнечногорск</a></li>
+							<li><a href="#">Софрино</a></li>
+							<li><a href="#">Ступино</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Т</h4>
+						<ul>
+							<li><a href="#">Талдом</a></li>
+							<li><a href="#">Троицк</a></li>
+							<li><a href="#">Тучково</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Ф</h4>
+						<ul>
+							<li><a href="#">Фрязино</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Х</h4>
+						<ul>
+							<li><a href="#">Химки</a></li>
+							<li><a href="#">Хотьково</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Ч</h4>
+						<ul>
+							<li><a href="#">Черноголовка</a></li>
+							<li><a href="#">Чехов</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Ш</h4>
+						<ul>
+							<li><a href="#">Шатура</a></li>
+							<li><a href="#">Шаховская</a></li>
+							<li><a href="#">Щелково</a></li>
+							<li><a href="#">Щербинка</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Э</h4>
+						<ul>
+							<li><a href="#">Электрогорск</a></li>
+							<li><a href="#">Электросталь</a></li>
+							<li><a href="#">Электроугли</a></li>
+						</ul>
+					</div>
+					<div class="modal--sity__item">
+						<h4>Я</h4>
+						<ul>
+							<li><a href="#">Ямуга</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="thanks">
+			<button class="close thanks_close" type="button"></button>
+
+			<h3>Спасибо <br>за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
 	<!-- 	modal end-->
+
+
 
 	<script src="js/scripts.min.js"></script>
 </body>

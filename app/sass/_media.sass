@@ -1,70 +1,736 @@
 
-@media only screen and (max-width : 1200px)
-
-	.header
-
-
-@media only screen and (max-width : 992px)
-	#thanks
-		padding: 40px
-
-	.modal
-		width: 320px
-		padding: 40px
-
+@media only screen and (max-width : 1550px)
 	.nav
-		position: fixed
-		display: block
-		width: 320px
-		height: 100%
-		flex-direction: column
-		right: -100%
-		top: 80px
-		z-index: -1
-		background: rgba(0, 0, 0, .9)
-		transition: all .3s
+		padding: 8px 20px
+
+		&__logo
+			width: 130px
+			padding-left: 20px
+
+			img
+				height: 30px
 
 		ul
-			display: flex
-			flex-direction: column
-			justify-content: center
-			margin-top: 40px
-			margin-left: 40px
+			margin-left: 130px
 
 		li
-			margin: 0
-			margin-bottom: 10px
+			margin-right: 10px
+			a
+				font-size: 14px
 
-		a
-			color: #fff
-		
-		&--active
-			right: 0
+		&__tel
+			font-size: 18px
+
+		.btn
+			padding: 0 10px
+			font-size: 14px
+
+
+@media only screen and (max-width : 1200px)
+	.calculation__step
+
+		&_list
+			justify-content: space-around
+
+		&_item
+			margin-bottom: 20px
+			width: 30%
+
+			br
+				display: none
+
+	.header
+		margin-top: 50px
+
+	.contacts__form
+		.form__col
+			width: 48%
+			&:nth-child(2)
+				width: 48%
 
 	.hamburger
 		display: block
-		z-index: 1001
-		right: 15px
 
-	.hamburger-box
+	.nav
+		justify-content: flex-end
+		padding-right: 65px
+		top: 0
+
+		&__tel
+			margin-right: 20px
+
+		ul
+			display: none
+
+		&__responsive
+			top: -100%
+			display: block
+			z-index: 999
+			&--active
+				top: 50px				
+				background: rgba(255, 255, 255, .85)
+
+			ul
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin: 40px
+
+			li
+				a
+					font-size: 18px
+					color: #000
+					&:hover
+						text-decoration: underline
+
+
+	.form
+		padding: 20px
+
+
+	.range
+		&__item
+			&--max
+				width: 50%
+			&--min
+				width: 50%
+			&_img
+				margin-right: 15px
+
+			&_list
+				a
+					margin-right: 20px
+
+					&:nth-child(4n)
+						margin-right: 20px
+	
+	.rent
+		&__item
+			&--min
+				width: 49%
+
+			&--max
+				width: 49%
+
+	.orders__item_img
+		display: block
+		img
+			height: auto
+			display: block
+
+		a
+			top: auto
+			bottom: auto
+
+
+@media only screen and (max-width : 992px)
+	
+	.modal
+		&--sity
+			width: 540px
+			&__list
+				column-count: 2
+
+		&--video
+			width: 480px
+
+			iframe
+				height: 200px
+
+	.calculation
+		&__menu
+			width: 30%
+			padding-right: 15px
+
+			ul
+				padding-left: 0
+
+			h3
+				font-size: 16px
+				margin-bottom: 15px
+
+			a
+				font-size: 14px
+
+			&_nav
+				margin-bottom: 25px
+
+		&__content
+			width: 70%
+			padding-left: 15px
+
+		&__form
+			td
+				font-size: 14px
+				padding: 2px 10px
+
+			th
+				font-size: 16px
+				padding: 10px
+
+	.contacts
+		&__info
+			&_item
+				width: 100%
+
+				.item
+					b
+						font-size: 16px
+
+					p
+						font-size: 14px
+
+		&__form
+			.form
+				padding: 20px
+
+				&__col
+					width: 100%
+					margin-bottom: 15px
+					&:nth-child(2)
+						width: 100%
+						margin-bottom: 0
+
+				&__line
+					justify-content: space-between
+
+				input
+					max-width: 80%
+
+
+	.header
+		display: none
+
+	.hero
+		text-align: center
+
+		&__sub-title
+			margin-left: 0
+			text-align: center
+
+		&__stock
+			margin-left: 0
+			text-align: center
+
+		.form
+			max-width: 370px
+			margin: 0 auto
+
+		.clock
+			margin: 0 auto
+			width: 265px
+
+	.range
+		&__item
+			width: 100%
+
+			&--banner
+				max-height: 100%
+				margin-bottom: 15px
+				display: block
+
+			&_list
+				justify-content: space-between
+
+				a
+					width: 48%
+					margin-right: 0
+
+				a:nth-child(4n)
+					margin-right: 0
+
+			&--question_info a
+				max-width: 190px
+
+			&--min, &--max
+				.range__item_list
+					width: 100%
+
+	.rent
+		&__container
+			flex-wrap: wrap
+
+		&__item
+			&--max
+				width: 100%
+				margin-bottom: 15px
+			&--min
+				width: 100%
+
+	.factory iframe
+		height: 400px
+
+
+	.orders__item
+		width: 100%
+
+	.question .block
+		margin: 0 auto 10px
+
+	.footer
+		&__container
+			flex-direction: column
+			align-items: center
+
+
+		&__col
+			margin-bottom: 25px
+			text-align: center
+
+	.certificates-next,
+	.certificates-prev
+		display: block
+		background-color: rgba(#181818, .5)
+		width: 29px
+		height: 56px
+		border-radius: 4px
+
+	.certificates-next
 		right: 0
 
+	.certificates-prev
+		left: 0
 
 
 @media only screen and (max-width : 767px)
-	.header
+	.calculation
+		h2
+			font-size: 24px
+			margin-bottom: 20px
+
+		&__container
+			flex-direction: column-reverse
+
+		&__menu
+			width: 100%
+			padding-right: 0
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			&::before
+				right: -100%
+			&_nav
+				width: 48%
+
+
+		&__content
+			width: 100%
+			padding-left: 0
+
+			h3
+				margin-bottom: 20px
+				font-size: 20px
+
+			b
+				margin-bottom: 10px
+
+			p
+				margin-bottom: 30px
+
+		&__form
+			&_button
+				p
+					margin-bottom: 0
+
+	.contacts
+		&__info, &__form, &__map
+			h2
+				font-size: 24px
+				margin-bottom: 15px
+
+	h1
+		font-size: 30px
+
+	h2
+		font-size: 24px
+
+	h3
+		font-size: 20px
+	
+
+	.header__btn
+		display: none
+
+	.hero
+		h1
+			margin: 15px 0
+
+		&__sub-title
+			margin-bottom: 15px
+			font-size: 16px
+
+	.title
+		margin-bottom: 40px
+		h2
+			font-size: 24px
+
+	.range
+		&--catalog
+			h2
+				font-size: 24px
+
+			p, b
+				font-size: 14px
+
+		h3
+			font-size: 20px
+			margin-bottom: 15px
+
+		&__item
+			align-items: center
+			text-align: center
+			&_list
+				width: 100%
+
+				a
+					margin-bottom: 5px
+
+			&_img
+				width: 60%
+				max-width: 100%
+				height: auto
+				margin: 0 auto 15px
+
+			&_wrap
+				flex-wrap: wrap
+
+			&--min
+				.range__item_img
+					width: 60%
+					max-width: 100%
+					height: auto
+					margin: 0 auto 15px
+
+			&--question
+				&_name
+					margin: 0 auto 10px
+
+				&_info
+					a
+						margin: 0 auto
+
+	.factory iframe
+		height: 350px
+
+	.info h3
+		line-height: 1.3
+		font-size: 20px
+
+	.orders
+		&__item
+			margin-bottom: 30px
+
+			&_info
+				margin-bottom: 5px
+
+	.rent
+		padding: 40px 0
+
 
 @media only screen and (max-width : 576px)
-	.header
+
+	.modal
+		max-width: 300px
+		padding: 25px
+
+		&--sity
+			width: 540px
+			max-width: 100%
+
+		&__information
+			br
+				display: none
+
+		&__price
+			b
+				font-size: 14px
+
+		.form__line--date
+			div
+				width: 100%
+
+				&:first-child
+					width: 100%
+
+		.close
+			width: 20px
+			height: 20px
+			right: 10px
+			top: 10px
+			&::before
+				display: none
+
+	.calculation
+		&__form
+			th
+				font-size: 14px
+
+			td
+				padding: 2px 4px
+				font-size: 12px
+
+			input
+				max-width: 40px
+
+		&__content
+			ul
+				padding: 0 5px
+				font-size: 12px
+				flex-wrap: wrap
+
+				li
+					margin-bottom: 5px
+
+				b
+					font-size: 14px
+
+	.orders
+		padding-bottom: 0
+
+	.question
+		padding-bottom: 30px
+
+	.map
+		iframe
+			position: relative
+			height: 350px
+
+		h3
+			text-align: center
+
+		&__iframe
+			height: 100%
+
+		&__block
+			position: relative
+			top: 0
+			max-width: 100%
+
+			&_top
+				justify-content: center
+
+	.info ul
+		margin-left: 30px
+
+	.rent__item p
+		margin-bottom: 10px
+
+	.nav__logo
+		width: 120px
+
 
 @media only screen and (max-width : 480px)
-	.header
+	.modal
+		&--sity
+			&__list
+				column-count: 1
+				text-align: center
+
+	.calculation__step
+		&_item
+			width: 45%
+
+			&::before
+				display: none
+
+			img
+				margin-bottom: 15px
+
+	.contacts
+		&__info, &__form, &__map
+
+			h2
+				font-size: 22px
+		
+		&__info
+			&_item
+				.item
+					padding-left: 30px
+
+					img
+						width: 20px
+
+					&--tel
+
+						p
+							width: 100%
+
+				&--bank
+					p
+						padding: 10px
+						font-size: 14px
+
+					h4
+						font-size: 18px
+						margin-left: 0
+
+		&__form
+			.form
+				&__line
+					flex-direction: column
+					align-items: flex-start
+
+				input
+					max-width: 100%
+
+				.btn
+					font-size: 14px
+					padding: 0 10px
+					width: 100%
 
 
+	h1
+		font-size: 24px
+
+		br
+			display: none
+
+	h2
+		font-size: 22px
+
+	h3
+		font-size: 18px
+
+	.title
+		h2
+			font-size: 22px
+
+	.range
+		h3
+			font-size: 18px
+
+		&--catalog
+			h2
+				font-size: 22px
+
+		&__crumbs
+			margin-bottom: 15px
+
+	.hero__stock_text
+		font-size: 14px
+
+	.rent__item img
+		width: 100%
+		margin-right: 0
+		margin-bottom: 15px
+	
+	.video
+		background-size: cover
+
+	.nav
+		&__tel
+			display: none
+
+		&__logo
+			padding-left: 15px
+			width: 115px
+
+	.header__logo
+		font-size: 14px
+
+		img
+			height: 30px
+
+		span
+			margin-left: 20px
+			font-size: 12px
+
+			&::before
+				left: -10px
+
+			br
+				display: none
+	
+	.up
+		right: 20px
+		&--active
+			right: 20px
+			bottom: 20px
+
+	.question
+		&__table
+			padding: 10px
+
+		.block__content
+			padding: 10px 0
+
+		.block__content_arrow
+			display: none
+	
+	.orders__item
+		flex-wrap: wrap
+
+		&_img
+			width: 100%
+			margin-bottom: 10px
+
+			a
+				bottom: 0
+
+		&_content
+			width: 100%
+
+	.rent__item--min
+		&_header
+			padding: 10px 0
+			font-size: 14px
+
+		&_block
+			padding: 10px
+
+			a, li
+				font-size: 12px
+
+			li
+				padding: 0
+
+	.factory, .info
+		p, ul
+			font-size: 14px
 
 
+	.rent__item--min_footer
+		padding-top: 10px
+		padding-left: 0
+
+		a
+			white-space: nowrap
+
+		.btn
+			font-size: 14px
+
+	.info
+		padding: 30px 0
+
+	.map__block_top img
+		margin-right: 15px
+
+	.question .block__header
+		padding: 10px 5px
+		line-height: 1.2
+
+	.crumbs
+		margin-bottom: 20px
+
+		ul
+			padding: 0
 
 
+@media only screen and (max-width : 400px)
+	.calculation__menu_nav
+		width: 100%
+		text-align: center
 
+	.range__item
+		&_img
+			width: 100%
+
+		&_list
+			a
+				width: 100%
+	
+	.footer ul
+		column-count: 1
+		margin-bottom: 20px
 
 
